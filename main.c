@@ -34,6 +34,7 @@ int main() {
       temp = temp -> next;
   }
   printf("null");
+  // Outputs -> Data: 100 200 300 null
   return 0;
 }
 
