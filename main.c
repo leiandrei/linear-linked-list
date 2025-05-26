@@ -17,6 +17,11 @@ int main() {
   middle = malloc(sizeof(struct node));
   last = malloc(sizeof(struct node));
 
+  if (!head) {
+    perror("Memory Allocation Failed");
+    return 1;
+  }
+
   head -> data = 100;
   middle -> data = 200;
   last -> data = 300;
@@ -35,6 +40,10 @@ int main() {
   }
   printf("null");
   // Outputs -> Data: 100 200 300 null
+  free(head);
+  free(middle);
+  free(last);
+  
   return 0;
 }
 
